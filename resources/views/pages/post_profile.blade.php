@@ -32,6 +32,7 @@
 						<form action="#" method="post" id="submit-job-form" class="job-manager-form" enctype="multipart/form-data">
 
 							<fieldset>
+								@if(Auth::guest())
 								<label>Have an account?</label>
 								<div class="field account-sign-in">
 									<p>
@@ -43,12 +44,17 @@
 										If you don‘t have an account you can create one below by entering your email address. A password will be  automatically emailed to you.
 									</div>
 								</div>
+								@endif
 							</fieldset>
 
 							<fieldset>
 								<label>Your Email <span class="required">*</span></label>
 								<div class="field">
-									<input type="email" class="form-control" name="create_account_email" id="account_email" placeholder="you@yourdomain.com" value="" />
+									@if ($user)
+										<input type="email" class="form-control" name="create_account_email" id="account_email" placeholder="you@yourdomain.com" value="{{ $user->email }}" disabled />
+									@else
+										<input type="email" class="form-control" name="create_account_email" id="account_email" placeholder="you@yourdomain.com" value="" />
+									@endif
 								</div>
 							</fieldset>
 							
@@ -56,14 +62,14 @@
 							<fieldset class="fieldset-job_title">
 								<label for="job_title">Job title</label>
 								<div class="field">
-									<input type="text" class="form-control" name="job_title" id="job_title" placeholder="e.g. “Pet Sitter”" value=""/>
+									<input type="text" class="form-control" name="job_title" id="job_title" placeholder="e.g. “Student / Public Figure”" value=""/>
 								</div>
 							</fieldset>
 
 							<fieldset class="fieldset-job_location">
 								<label for="job_location">Location <small>(optional)</small></label>
 								<div class="field">
-									<input type="text" class="form-control" name="job_location" id="job_location" placeholder="e.g. &quot;London, UK&quot;, &quot;New York&quot;, &quot;Houston, TX&quot;" value=""/>
+									<input type="text" class="form-control" name="job_location" id="job_location" placeholder="e.g. &quot;Medan, ID&quot;, &quot;Jakarta&quot;, &quot;Kuala Lumpur, MY&quot;" value=""/>
 									<small class="description">Leave this blank if the job can be done from anywhere (i.e. telecommuting)</small>
 								</div>
 							</fieldset>

@@ -14,14 +14,14 @@
 <script src="vendor/flexslider/jquery.flexslider-min.js"></script>
 
 <!-- Newsletter Form -->
-<script src="vendor/jquery.validate.js"></script>
-<script src="js/newsletter.js"></script>
+<script src='{{ asset('vendor/jquery.validate.js') }}'></script>
+<script src='{{ asset('js/newsletter.js') }}'></script>
 
-<script src="js/custom.js"></script>
+<script src='{{ asset('js/custom.js') }}'></script>
 
 <!-- Google Map -->
 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="vendor/jquery.gmap3.min.js"></script>
+<script src='{{ asset('vendor/jquery.gmap3.min.js') }}'></script>
 
 <script>
     jQuery(function($){

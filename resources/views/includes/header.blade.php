@@ -25,6 +25,7 @@
                             <li><a href="/register"><i class="fa-pencil-square-o fa"></i> Register</a></li>
                             <li><a href="/login"><i class="fa-lock fa"></i> Login</a></li>
                         @else
+                            <li><a href="{{ action('ProfileController@edit', $id) }}">{{ $name }}</a></li>
                             <li>
                                 <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -49,7 +50,7 @@
         <div class="container">
             <!-- Logo -->
             <div class="logo">
-                <a href="/"><img src="images/logo.png" alt="PetSitter" width="50%"></a>
+                <a href="/"><img src=' {{ asset('images/logo.png') }}' alt="PetSitter" width="50%"></a>
                 <!-- <h1><a href="index.html"><span>Pet</span>Sitter</a></h1>
                 <p class="tagline">Find an Awesome PetSitter</p> -->
             </div>

@@ -17,36 +17,36 @@
 <!-- Base + Vendors CSS -->
 <link rel="stylesheet" href='{{ asset('css/bootstrap.min.css')}}'>
 <link rel="stylesheet" href='{{ asset('css/fonts/font-awesome/css/font-awesome.css')}}'>
-<link rel="stylesheet" href="css/fonts/entypo/css/entypo.css">
-<link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css" media="screen">
-<link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css" media="screen">
-<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
-<link rel="stylesheet" href="vendor/flexslider/flexslider.css" media="screen">
-<link rel="stylesheet" href="vendor/job-manager/frontend.css" media="screen">
+<link rel="stylesheet" href='{{ asset('css/fonts/entypo/css/entypo.css')}}'>
+<link rel="stylesheet" href='{{ asset('vendor/owl-carousel/owl.carousel.css')}}' media="screen">
+<link rel="stylesheet" href='{{ asset('vendor/owl-carousel/owl.theme.css')}}' media="screen">
+<link rel="stylesheet" href='{{ asset('vendor/magnific-popup/magnific-popup.css')}}' media="screen">
+<link rel="stylesheet" href='{{ asset('vendor/flexslider/flexslider.css')}}' media="screen">
+<link rel="stylesheet" href='{{ asset('vendor/job-manager/frontend.css')}}' media="screen">
 
 <!-- Theme CSS-->
-<link rel="stylesheet" href="css/theme.css">
-<link rel="stylesheet" href="css/theme-elements.css">
-<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href='{{ asset('css/theme.css')}}'>
+<link rel="stylesheet" href='{{ asset('css/theme-elements.css')}}'>
+<link rel="stylesheet" href='{{ asset('css/animate.min.css')}}'>
 
 
 
 <!-- Head Libs -->
-<script src="vendor/modernizr.js"></script>
+<script src='{{ asset('vendor/modernizr.js')}}'></script>
 
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="vendor/respond.min.js"></script>
+    <script src='{{ asset('vendor/respond.min.js')}}'></script>
 <![endif]-->
 
 <!--[if IE]>
-    <link rel="stylesheet" href="css/ie.css">
+    <link rel="stylesheet" href='{{ asset('css/ie.css')}}'>
 <![endif]-->
 
 <!-- Favicons
 ================================================== -->
-<link rel="shortcut icon" href="images/favicon.png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+<link rel="shortcut icon" href='{{ asset('images/favicon.png')}}'>
+<link rel="apple-touch-icon" href='{{ asset('images/apple-touch-icon.png')}}'>
+<link rel="apple-touch-icon" sizes="72x72" href='{{ asset('images/apple-touch-icon-72x72.png')}}'>
+<link rel="apple-touch-icon" sizes="114x114" href='{{ asset('images/apple-touch-icon-114x114.png')}}'>
+<link rel="apple-touch-icon" sizes="144x144" href='{{ asset('images/apple-touch-icon-144x144.png')}}'>

@@ -283,7 +283,7 @@
                             </div>
                         </div>
 
-                        <a href="job-post-profile.html" class="btn btn-primary">Start Here <i class="fa fa-arrow-circle-o-right fa-lg fa-right"></i></a>
+                        <a href="/profile/create" class="btn btn-primary">Start Here <i class="fa fa-arrow-circle-o-right fa-lg fa-right"></i></a>
 
                     </div>
                 </div>

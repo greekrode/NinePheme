@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return View::make('pages.home');
-});
+Route::get('/', 'IndexController@index')->name('index');
 
 Route::get('/login', function () {
     return View::make('pages.login');
@@ -27,9 +25,7 @@ Route::get('/influencer', function () {
     return View::make('pages.influencer');
 });
 
-Route::get('/post_profile', function() {
-    return View::make('pages.post_profile');
-});
+Route::resource('profile','ProfileController');
 
 Route::get('/post_job', function() {
     return View::make('pages.post_job');

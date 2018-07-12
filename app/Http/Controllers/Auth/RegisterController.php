@@ -55,21 +55,22 @@ class RegisterController extends Controller
             'email'    => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|confirmed',
             'username' => 'required|string|max:12',
+            'instagram_token' => 'string',
         ]);
 
-        // $validatedData['password']        = bcrypt(array_get($validatedData, 'password'));
-        // $validatedData['activation_code'] = str_random(30).time();
-        // $user                             = app(User::class)->create($validatedData);
+        $validatedData['password']        = bcrypt(array_get($validatedData, 'password'));
+        $validatedData['activation_code'] = str_random(30).time();
+        $user                             = app(User::class)->create($validatedData);
 
-        try {
-            $validatedData['password']        = bcrypt(array_get($validatedData, 'password'));
-            $validatedData['activation_code'] = str_random(30).time();
-            $user                             = app(User::class)->create($validatedData);
+        // try {
+        //     $validatedData['password']        = bcrypt(array_get($validatedData, 'password'));
+        //     $validatedData['activation_code'] = str_random(30).time();
+        //     $user                             = app(User::class)->create($validatedData);
 
-        } catch (\Exception $exception) {
-            logger()->error($exception);
-            return redirect()->back()->with('message', 'Unable to create new user.');
-        }
+        // } catch (\Exception $exception) {
+        //     logger()->error($exception);
+        //     return redirect()->back()->with('message', 'Unable to create new user.');
+        // }
 
         $user->notify(new UserRegisteredSuccessfully($user));
 
