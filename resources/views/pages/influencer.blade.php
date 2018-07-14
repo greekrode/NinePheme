@@ -32,23 +32,26 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <figure class="alignnone">
-                                        <img src="http://placehold.it/320x290" alt="">
+                                        {{-- <img src="http://placehold.it/320x290" alt=""> --}}
+                                        <img src="{{ $instagram ['profile_picture'] }}" alt="">
                                     </figure>
                                 </div>
                                 <div class="col-md-7">
-                                    <h2 class="name">Lameka Reeves</h2>
+                                    <h2 class="name">{{ $instagram  ['full_name'] }}</h2>
                                     <i class="tagline"></i>
                                     <ul class="meta">
-                                        <li>Public Figure</li>
-                                        <li>Open Minded</li>
+                                        {{-- <li>Public Figure</li>
+                                        <li>Open Minded</li> --}}
+                                        <li>{{ $instagram ['bio'] }}</li>
                                     </ul>
                                     <ul class="info">
-                                        <li><i class="fa fa-map-marker"></i> Looking within 20 miles of <a href="#">London, UK</a></li>
-                                        <li><i class="fa fa-clock-o"></i> Updated 4 minutes ago.</li>
+                                        <li><i class="fa fa-users"></i> Following:{{ $instagram ['counts']['follows'] }}</a></li>
+                                        <li><i class="fa fa-users"></i> Followers:{{ $instagram ['counts']['followed_by'] }}</a></li>
+                                        <li><i class="fa fa-portrait"></i> Posts:{{ $instagram ['counts']['media'] }}</a></li>
                                     </ul>
 
                                     <ul class="info" style="font-size:35px !important; display:inline-block !important;">
-                                        <li style="display: inline-block !important"><i class="fa fa-instagram"></i></li>
+                                        {{-- <li style="display: inline-block !important"><i class="fa fa-instagram"></i></li> --}}
                                         <li style="display: inline-block !important"><i class="fa fa-facebook"></i></li>
                                         <li style="display: inline-block !important"><i class="fa fa-twitter"></i></li>
                                     </ul>

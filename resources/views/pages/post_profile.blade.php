@@ -70,19 +70,19 @@
 								<label for="job_location">Location <small>(optional)</small></label>
 								<div class="field">
 									<input type="text" class="form-control" name="job_location" id="job_location" placeholder="e.g. &quot;Medan, ID&quot;, &quot;Jakarta&quot;, &quot;Kuala Lumpur, MY&quot;" value=""/>
-									<small class="description">Leave this blank if the job can be done from anywhere (i.e. telecommuting)</small>
+									{{-- <small class="description">Leave this blank if the job can be done from anywhere (i.e. telecommuting)</small> --}}
 								</div>
 							</fieldset>
 
 							<fieldset class="fieldset-company_logo">
-								<label for="company_logo">Photo <small>(optional)</small></label>
+								<label for="company_logo">Photo <small></small></label>
 								<div class="field">
 									<input type="file" class="form-control" name="company_logo" id="company_logo" />
 									<small class="description">Max. file size: 50 MB. Allowed images: jpg, gif, png.</small>
 								</div>
 							</fieldset>
 
-							<div class="row">
+							{{-- <div class="row">
 								<div class="col-md-6">
 									<fieldset class="fieldset-job_type">
 										<label for="job_type">Job Type</label>
@@ -109,7 +109,7 @@
 										</div>
 									</fieldset>
 								</div>
-							</div>
+							</div> --}}
 
 							<fieldset class="fieldset-job_description">
 								<label>Description</label>

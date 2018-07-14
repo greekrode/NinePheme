@@ -13,9 +13,9 @@
 
 Route::get('/', 'IndexController@index')->name('index');
 
-Route::get('/login', function () {
-    return View::make('pages.login');
-});
+Route::get('/login','InstaAuthController@login');
+
+Route::get('/login/callback','InstaAuthController@callback');
 
 Route::get('/a', function () {
     return view('a');
@@ -35,8 +35,17 @@ Route::get('/list', function() {
     return View::make('pages.list');
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 $this->get('/verify-user/{code}', 'Auth\RegisterController@activateUser')->name('activate.user');
+
+Route::get('/success', function () {
+    return View::make('pages.success');
+});
+
+// Route::get( '/auth0/callback', '\Auth0\Login\Auth0Controller@callback' )->name( 'auth0-callback' );
+
+// Route::get('/login', 'Auth\Auth0IndexController@login' )->name( 'login' );
+// Route::get('/logout', 'Auth\Auth0IndexController@logout' )->name( 'logout' )->middleware('auth');
